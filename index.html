@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -18,9 +10,7 @@
     />
     <link rel="icon" href="data:," />
     <style>
-      /* =========================
-       VARIABLES & GLOBALS
-       ========================= */
+      
       :root {
         --bg: #0f1720;
         --glass: rgba(255, 255, 255, 0.06);
@@ -61,9 +51,7 @@
         padding: 0 20px;
       }
 
-      /* =========================
-       HEADER
-       ========================= */
+     
       header {
         position: fixed;
         inset: 0 0 auto 0;
@@ -161,9 +149,7 @@
         color: white;
       }
 
-      /* =========================
-       HERO (glass + center text)
-       ========================= */
+    
       .hero {
         min-height: 100vh;
         display: flex;
@@ -311,6 +297,12 @@
           rgba(255, 255, 255, 0.01)
         );
         border: 1px solid rgba(255, 255, 255, 0.04);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-color: var(--accent);
       }
       .service-card::after {
         content: "";
@@ -354,6 +346,12 @@
         overflow: hidden;
         background: transparent;
         border: 1px solid rgba(255, 255, 255, 0.03);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.1);
       }
       .project .meta {
         padding: 18px;
@@ -374,11 +372,16 @@
         height: 240px;
         background: #0b1216;
         display: block;
+        overflow: hidden;
       }
       .project .media img {
         width: 100%;
         height: 330px;
         object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .project:hover .media img {
+        transform: scale(1.05);
       }
 
       /* Alternate layout on desktop */
@@ -451,6 +454,11 @@
         border-radius: 12px;
         text-align: center;
         border: 1px solid rgba(255, 255, 255, 0.03);
+        transition: transform 0.3s ease, border-color 0.3s;
+      }
+      .contact-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent);
       }
       .contact-card h5 {
         margin: 6px 0 2px;
@@ -668,19 +676,19 @@
             <!-- project 1 -->
             <article class="project" aria-labelledby="p1">
               <div class="meta">
-                <h4 id="p1">Bank Management System</h4>
+                <h4 id="p1">JYM Website</h4>
                 <p class="muted">
                   A secure banking system for account management, transactions,
                   and statements.
                 </p>
                 <div style="margin-top: 12px" class="stack">
-                  <a class="btn" href="#" aria-label="View Project">View</a>
+                  <a class="btn" href="file:///C:/Users/deepu/OneDrive/Desktop/gym/gym.html" aria-label="View Project">View</a>
                 </div>
               </div>
               <div class="media">
                 <img
-                  src="https://i.pinimg.com/736x/cc/70/e6/cc70e61bf3fedbfc0d40ea9019ca2995.jpg"
-                  alt="block project screenshot"
+                  src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z3ltfGVufDB8fDB8fHww"
+                  alt="JYM website"
                 />
               </div>
             </article>
@@ -694,14 +702,17 @@
                   support.
                 </p>
                 <div style="margin-top: 12px" class="stack">
-                  <a class="btn" href="#" aria-label="View Project">View</a>
+                  <a class="btn" href="file:///C:/Users/deepu/OneDrive/Desktop/calculater/index.html" aria-label="View Project">View</a>
                 </div>
               </div>
               <div class="media">
-                <img
-                  src="https://i.pinimg.com/736x/f8/55/0f/f8550faf8c2d8202b4d6c5cbadd6faa4.jpg"
+                
+               <img
+                  src="https://plus.unsplash.com/premium_photo-1715107535309-b2e39f3b5f2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGNhbGN1bGF0b3J8ZW58MHx8MHx8fDA%3D"
                   alt="Calculator project screenshot"
-                />
+                /></a>
+               
+                
               </div>
             </article>
 
@@ -713,14 +724,15 @@
                   Secure login UI with validation and responsive design.
                 </p>
                 <div style="margin-top: 12px" class="stack">
-                  <a class="btn" href="#" aria-label="View Project">View</a>
+                  <a class="btn" href="file:///C:/Users/deepu/OneDrive/Desktop/login/login.html" aria-label="View Project">View</a>
                 </div>
               </div>
               <div class="media">
                 <img
                   src="https://i.pinimg.com/736x/a0/28/43/a02843c419f4906515f8cf5a4b897423.jpg"
                   alt="Login page screenshot"
-                />
+                /></a>
+               
               </div>
             </article>
 
@@ -732,13 +744,12 @@
                   Billing & invoice generation tool for small businesses.
                 </p>
                 <div style="margin-top: 12px" class="stack">
-                  <a class="btn" href="#" aria-label="View Project">View</a>
+                  <a class="btn" href="file:///C:/Users/deepu/OneDrive/Desktop/amazon/amazoneclone.html" aria-label="View Project">View</a>
                 </div>
               </div>
               <div class="media">
-                <img
-                  src="c:\Users\deepu\Downloads\Bees Back To School Classroom Door Poster.png"
-                  alt="Billing system screenshot"
+                <img src="c:\Users\deepu\Downloads\istockphoto-2184965848-612x612.jpg" alt="">
+                  src="Amazon clone"
                 />
               </div>
             </article>
@@ -761,11 +772,11 @@
             <div class="avatar">
               <img
                 src="c:\Users\deepu\Downloads\117b8bbe-558e-475a-b87d-19a6efb68cda.png"
-                alt="bajrang godara photo"
+                alt=""
               />
             </div>
             <div class="bio">
-              <h4 style="margin-bottom: 8px">I'm bajrang — Web Developer</h4>
+              <h4 style="margin-bottom: 8px">I'm chandraprakash — Web Developer</h4>
               <p class="muted">
                 I specialize in building modern websites and web apps using best
                 practices — responsive layouts, clean code, and strong UX. I
@@ -774,7 +785,7 @@
                 Java backend, and modern frontend libraries.
               </p>
               <div style="margin-top: 16px" class="stack">
-                <a class="btn" href="#">Download CV</a>
+                <a class="btn" href="file:///C:/Users/deepu/Downloads/Professional%20Modern%20CV%20Resume%20(12).pdf">Download CV</a>
                 <a class="btn secondary" href="#contact">Contact</a>
               </div>
             </div>
@@ -805,7 +816,7 @@
                 "
               />
               <h5>Email</h5>
-              <p class="muted">yogeshghaswan639@gmail.com</p>
+              <p class="muted">cpchoudhary640@gmail.com</p>
             </div>
             <div class="contact-card">
               <img
@@ -844,7 +855,7 @@
     <footer>
       <div class="container footer-inner">
         <div class="brand" style="font-size: 1.2rem">
-          <span class="accent">Yogesh</span>
+          <span class="accent">chandraprakash</span>
         </div>
         <div class="muted">
           Web Developer — building clean responsive experiences
@@ -926,6 +937,4 @@
       })();
     </script>
   </body>
-</html>
-</body>
 </html>
